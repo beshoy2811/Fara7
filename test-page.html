@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار - Farah System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .success {
+            background: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .emoji {
+            font-size: 2rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🎉</div>
+        <h1>مبروك!</h1>
+        
+        <div class="success">
+            ✅ GitHub Pages يعمل بنجاح!
+        </div>
+        
+        <div class="info">
+            <h3>🏪 نظام Farah للمحاسبة</h3>
+            <p>تم نشر المشروع بنجاح على GitHub Pages</p>
+        </div>
+        
+        <div class="status">
+            <h4>📊 حالة النظام:</h4>
+            <p>✅ الاستضافة: تعمل</p>
+            <p>✅ الرابط: صحيح</p>
+            <p>✅ الاتصال: متصل</p>
+        </div>
+        
+        <div>
+            <a href="index.html" class="btn">
+                🏠 الذهاب للصفحة الرئيسية
+            </a>
+            <a href="deploy-guide.html" class="btn">
+                📖 دليل النشر
+            </a>
+        </div>
+        
+        <div class="info">
+            <h4>📱 للاستخدام من الهاتف:</h4>
+            <p>1. احفظ هذا الرابط في المفضلة</p>
+            <p>2. أو اضغط "Add to Home Screen"</p>
+            <p>3. استمتع بنظام المحاسبة!</p>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
+            <p>🌐 الرابط: <span id="currentUrl"></span></p>
+            <p>⏰ التاريخ: <span id="currentDate"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // عرض الرابط الحالي والتاريخ
+        document.getElementById('currentUrl').textContent = window.location.href;
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('ar-EG');
+        
+        // تأثير الترحيب
+        setTimeout(() => {
+            alert('🎉 مرحباً بك في نظام Farah!\n\nالمشروع يعمل بنجاح على GitHub Pages');
+        }, 1000);
+    </script>
+</body>
+</html>
